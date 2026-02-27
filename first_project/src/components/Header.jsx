@@ -1,14 +1,15 @@
 import React from "react";
+import { useState } from "react";
 
 export default function Header() {
+  const [count, setCount] = useState(0);
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+
   return (
     <>
-        <nav className="navbar">
-          <a href="#" className="hdr">Home</a>
-          <a href="#" className="hdr">About</a>
-          <a href="#" className="hdr">Services</a>
-          <a href="#" className="hdr">Contact</a>
-        </nav>
+        <button className="count-button" onClick={handleClick}>Count: {count}</button>
     </>
   );
 }

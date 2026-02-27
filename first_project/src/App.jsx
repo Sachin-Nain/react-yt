@@ -1,10 +1,12 @@
 import React from 'react';
 import Card from './components/Card.jsx';
 import jobOpenings from '../public/data.js';
+import Header from './components/Header.jsx';
 const App = () => {
   return (
     <>
-      <div className="All_Cards">
+    <Header />
+      {/* <div className="All_Cards">
         {jobOpenings.map((job,index) => (
           <div key={index}>
             <Card
@@ -19,7 +21,7 @@ const App = () => {
             />
           </div>
         ))}
-      </div>
+      </div> */}
     </>
   );
 };
